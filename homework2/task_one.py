@@ -1,9 +1,16 @@
-first_age = 27
-second_age = 43
-third_age = 38
+from math import sqrt
 
-neighbors_years_sum = first_age + second_age + third_age
-average_neighbors_age = neighbors_years_sum / 3
+point_by_x = input('Введите координату x: ')
+point_by_y = input('Введите координату y: ')
 
-print(f'ОбЩий возрост соседей: {neighbors_years_sum}')
-print(f'Средний возрост соседей: {average_neighbors_age}')
+point_by_x1 = input('Введите координату x1: ')
+point_by_y1 = input('Введите координату y1: ')
+
+point_by_x = float(point_by_x)
+point_by_x1 = float(point_by_x1)
+point_by_y = float(point_by_y)
+point_by_y1 = float(point_by_y1)
+
+distance = sqrt((point_by_x - point_by_x1)**2 + (point_by_y - point_by_y1)**2)
+
+print(f'Расстояние между точками: {distance}')
