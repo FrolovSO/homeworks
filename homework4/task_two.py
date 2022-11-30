@@ -1,4 +1,4 @@
-for seq in range(100):
+for seq in range(1, 101):
     if seq % 3 == 0 and seq % 5 == 0:
         print("FuzzBuzz")
     elif seq % 3 == 0:
