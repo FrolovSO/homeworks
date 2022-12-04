@@ -42,6 +42,7 @@ while True:
         error = True
 
     if users_input[4:6] == ("33") or ("44") or ("25"):
+    #if users_input[4:6] in ('33', '44', '25'):
         find_operator = operator[users_input[4:6]]
     else:
         find_operator = operator[users_input[4:7]]
