@@ -15,12 +15,13 @@ def distance(*args):
             dis = sqrt((point_x - point_x1)**2 + (point_y - point_y1)**2)
             print(f'Промежуточное расстояние между точками: {dis}')
             result_distance += dis
+            point_x = point_x1
+            point_y = point_y1
     print(f'Длинна маршрута между точками: {result_distance}')
 
 
-a = (5, 6)
-b = (3, 4)
-c = (8, 9)
-d = (10, 15)
+a = (1, 1)
+b = (1, 2)
+c = (2, 2)
 
-distance(a, b, c, d)
+distance(a, b, c)
