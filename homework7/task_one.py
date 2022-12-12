@@ -1,13 +1,11 @@
 def number_of_winner(results):
-    length = len(results)
-    for i in range(0, length):
-        for j in range(0, length - i - 1):
-            if results[j] > results[j + 1]:
-                temp = results[j]
-                results[j] = results[j + 1]
-                results[j + 1] = temp
-    winners_results = results[::-1]
-    print(winners_results[0:3])
+    sorted_results = list(reversed(sorted(results)))
+    winer_number = []
+
+    for i in sorted_results[0:3]:
+        winer_number.append(results.index(i)+1)
+
+    print(winer_number)
 
 
-results = number_of_winner([115, 352, 0, 600, 500])
+results = number_of_winner([115, 352, 660, 5, 500])
