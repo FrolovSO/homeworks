@@ -11,33 +11,25 @@ class School:
 
     def get_best_students(self):
         for student in self.students:
-            c1, c2, c3, c4 = student.student_info
-            for i in c4:
+            for i in student.performance:
                 if i == 5 or i == 6:
                     continue
                 else:
                     return None
-            print(c1, c2, c3)
+            print(student.name, student.lastName, student.groupNumber)
 
     def get_students(self, group_number):
         for student in self.students:
-            c1, c2, c3, c4 = student.student_info
-            if c3 != group_number:
+            if student.groupNumber != group_number:
                 continue
             else:
-                print(c1, c2, c3)
+                print(student.name, student.lastName, student.groupNumber)
 
     def get_students_without_exams(self):
         for student in self.students:
-            c1, c2, c3, c4 = student.student_info
-            count = 0
-            count_max = 0
-            for i in c4:
-                count += 1
-                count_max += i
-
-            if count_max/count >= 7:
-                print(c1, c2,)
+            average_score = sum(student.performance)/5
+            if average_score >= 7:
+                print(student.name, student.lastName)
             else:
                 continue
 
